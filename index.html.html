@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midia - Noticias Juveniles con Impacto</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER con gradiente neon -->
+    <header class="header-neon">
+        <nav class="nav-container">
+            <div class="logo">
+                <i class="fas fa-bolt logo-icon"></i>
+                <span class="logo-text">MIDIA</span>
+                <span class="logo-badge">LIVE</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="#"><i class="fas fa-fire"></i> Tendencias</a></li>
+                <li><a href="#"><i class="fas fa-podcast"></i> Podcasts</a></li>
+                <li><a href="#"><i class="fas fa-video"></i> Videos</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-search"><i class="fas fa-search"></i></button>
+                <button class="btn-facebook-connect" id="fbConnectBtn">
+                    <i class="fab fa-facebook"></i> Conectar
+                </button>
+                <div class="user-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Breaking News - Carrusel -->
+        <section class="breaking-news">
+            <div class="breaking-label">
+                <i class="fas fa-circle"></i> EN VIVO
+            </div>
+            <div class="breaking-ticker">
+                <div class="ticker-item">🔥 ¡Exclusiva! Nuevo disco de Bad Bunny en camino</div>
+                <div class="ticker-item">⚡ Taylor Swift rompe récord en Spotify</div>
+                <div class="ticker-item">🎮 Lanzamiento del GTA VI se retrasa</div>
+            </div>
+        </section>
+
+        <!-- Hero Destacado -->
+        <section class="hero-section">
+            <div class="hero-grid">
+                <div class="hero-main">
+                    <div class="hero-badge">NOTICIA DESTACADA</div>
+                    <h2>Revolución en la música urbana: el nuevo sonido que está cambiando todo</h2>
+                    <p>Descubre cómo los artistas emergentes están transformando la industria con fusiones inesperadas.</p>
+                    <div class="hero-meta">
+                        <span><i class="fas fa-user"></i> Por Redacción Midia</span>
+                        <span><i class="fas fa-clock"></i> Hace 2 horas</span>
+                        <span><i class="fas fa-comment"></i> 234 comentarios</span>
+                    </div>
+                    <button class="btn-read-more">Leer más <i class="fas fa-arrow-right"></i></button>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/images/hero-news.jpg" alt="Noticia destacada" onerror="this.src='https://picsum.photos/600/400?random=1'">
+                    <div class="image-overlay"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Facebook Feed Integration -->
+        <section class="facebook-feed-section">
+            <div class="section-header">
+                <h2><i class="fab fa-facebook" style="color: #1877f2;"></i> Lo que pasa en Facebook</h2>
+                <a href="#" class="see-all">Ver todo <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="facebook-feed-grid" id="facebookFeed">
+                <!-- Aquí se cargarán dinámicamente las publicaciones de Facebook -->
+                <div class="feed-loading">
+                    <div class="loader"></div>
+                    <p>Cargando noticias de Facebook...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grid de Noticias -->
+        <section class="news-grid-section">
+            <div class="section-header">
+                <h2><i class="fas fa-newspaper"></i> Últimas Noticias</h2>
+                <div class="category-filters">
+                    <button class="filter-btn active">Todos</button>
+                    <button class="filter-btn">Música</button>
+                    <button class="filter-btn">Tecnología</button>
+                    <button class="filter-btn">Deportes</button>
+                    <button class="filter-btn">Cultura</button>
+                </div>
+            </div>
+            <div class="news-grid">
+                <!-- Tarjetas de noticias generadas dinámicamente -->
+            </div>
+            <button class="btn-load-more">Cargar más <i class="fas fa-chevron-down"></i></button>
+        </section>
+
+        <!-- Podcasts Destacados -->
+        <section class="podcast-section">
+            <div class="section-header">
+                <h2><i class="fas fa-podcast"></i> Podcasts que no te puedes perder</h2>
+                <a href="#" class="see-all">Ver todos <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="podcast-grid">
+                <div class="podcast-card">
+                    <div class="podcast-image">
+                        <img src="https://picsum.photos/300/200?random=10" alt="Podcast">
+                        <div class="play-btn"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="podcast-info">
+                        <span class="podcast-category">Entretenimiento</span>
+                        <h3>La Hora del Cafecito</h3>
+                        <p>Conversaciones relajadas sobre la vida moderna.</p>
+                        <div class="podcast-meta">
+                            <span><i class="fas fa-headphones"></i> 12.5K</span>
+                            <span><i class="fas fa-clock"></i> 45 min</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Más tarjetas de podcast -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-neon">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <i class="fas fa-bolt logo-icon"></i>
+                    <span class="logo-text">MIDIA</span>
+                </div>
+                <p>El medio digital de la generación que conecta con el mundo a través de noticias, podcasts y cultura juvenil.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="link-column">
+                    <h4>Secciones</h4>
+                    <a href="#">Noticias</a>
+                    <a href="#">Podcasts</a>
+                    <a href="#">Videos</a>
+                    <a href="#">Tendencias</a>
+                </div>
+                <div class="link-column">
+                    <h4>Nosotros</h4>
+                    <a href="#">Quiénes somos</a>
+                    <a href="#">Contacto</a>
+                    <a href="#">Anunciate</a>
+                    <a href="#">Trabaja con nosotros</a>
+                </div>
+                <div class="link-column">
+                    <h4>Legal</h4>
+                    <a href="#">Política de privacidad</a>
+                    <a href="#">Términos de uso</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Midia Digital - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="js/facebook-feed.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
